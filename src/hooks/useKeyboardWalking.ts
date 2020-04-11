@@ -1,35 +1,51 @@
 import { useState } from 'react';
 
+const KEY_UP = 38;
+const KEY_DOWN = 40;
+const KEY_RIGHT = 39;
+const KEY_LEFT = 37;
+
 export default function useKeyboardWalking({
   itemsLength,
   walkType = 'column',
+  goBy = 1,
 }: {
-  walkType?: 'column' | 'grid';
+  walkType?: 'column' | 'row' | 'grid';
+  goBy?: number;
   itemsLength: number;
 }) {
   const [cursorPositionIndex, setCursorPositionIndex] = useState(0);
 
   const walkColumn = (keyCode: number) => {
-    if (keyCode === 38 && cursorPositionIndex > 0) {
-      setCursorPositionIndex(cursorPositionIndex - 1);
+    if (keyCode === KEY_UP && cursorPositionIndex > 0) {
+      setCursorPositionIndex(cursorPositionIndex - goBy);
     }
-    if (keyCode === 40 && cursorPositionIndex < itemsLength - 1) {
-      setCursorPositionIndex(cursorPositionIndex + 1);
+    if (keyCode === KEY_DOWN && cursorPositionIndex < itemsLength - 1) {
+      setCursorPositionIndex(cursorPositionIndex + goBy);
+    }
+  };
+
+  const walkRow = (keyCode: number) => {
+    if (keyCode === KEY_RIGHT && cursorPositionIndex < itemsLength - 1) {
+      setCursorPositionIndex(cursorPositionIndex + goBy);
+    }
+    if (keyCode === KEY_LEFT && cursorPositionIndex > 0) {
+      setCursorPositionIndex(cursorPositionIndex - goBy);
     }
   };
 
   const walkGrid = (keyCode: number) => {
-    if (keyCode === 39 && cursorPositionIndex < itemsLength - 1) {
+    if (keyCode === KEY_RIGHT && cursorPositionIndex < itemsLength - 1) {
       setCursorPositionIndex(cursorPositionIndex + 1);
     }
-    if (keyCode === 37 && cursorPositionIndex > 0) {
+    if (keyCode === KEY_LEFT && cursorPositionIndex > 0) {
       setCursorPositionIndex(cursorPositionIndex - 1);
     }
-    if (keyCode === 40 && cursorPositionIndex + 5 <= itemsLength - 1) {
-      setCursorPositionIndex(cursorPositionIndex + 5);
+    if (keyCode === KEY_DOWN && cursorPositionIndex + goBy <= itemsLength - 1) {
+      setCursorPositionIndex(cursorPositionIndex + goBy);
     }
-    if (keyCode === 38 && cursorPositionIndex - 5 >= 0) {
-      setCursorPositionIndex(cursorPositionIndex - 5);
+    if (keyCode === KEY_UP && cursorPositionIndex - goBy >= 0) {
+      setCursorPositionIndex(cursorPositionIndex - goBy);
     }
   };
 
@@ -38,8 +54,11 @@ export default function useKeyboardWalking({
   }) => {
     if (walkType === 'column') {
       walkColumn(keyCode);
-    } else {
-      console.log(keyCode);
+    }
+    if (walkType === 'row') {
+      walkRow(keyCode);
+    }
+    if (walkType === 'grid') {
       walkGrid(keyCode);
     }
   };

@@ -1,6 +1,6 @@
 import React from 'react';
 import { jsx, css } from '@emotion/core';
-import { lightGrey, mainOrange } from '../colors';
+import { mainOrange } from '../colors';
 /**@jsx jsx */
 
 type FilmsListItemProps = {
@@ -18,12 +18,14 @@ export default function FilmsListItem({
     <li
       css={css`
         width: calc(20% - 12px);
-        height: 250px;
+        display: inline-block;
+        min-height: 120px;
+        max-height: calc(20% * 5);
         margin-bottom: 10px;
         border: 2px solid ${active ? mainOrange : 'transparent'};
         transform: ${active ? 'scale(1.03)' : 'scale(1)'};
 
-        &:not(:nth-child(5n + 5)) {
+        &:not(:nth-of-type(5n + 5)) {
           margin-right: 10px;
         }
       `}

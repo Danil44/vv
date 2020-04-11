@@ -11,23 +11,33 @@ type FilmsListProps = {
 
 export default function FilmsList({ films, activeIndex }: FilmsListProps) {
   return (
-    <ul
+    <div
       css={css`
-        display: flex;
-        flex-wrap: wrap;
-        overflow: auto;
-        height: 70vh;
-        padding: 12px;
+        overflow: hidden;
+        height: 100%;
+        padding-right: 12px;
       `}
     >
-      {films.map((film, index) => (
-        <FilmsListItem
-          key={film.id}
-          name={film.original_title}
-          imageSrc={film.poster_path}
-          active={activeIndex === index}
-        />
-      ))}
-    </ul>
+      <ul
+        css={css`
+          display: flex;
+          flex-wrap: wrap;
+          width: 100%;
+          height: 90%;
+          overflow: auto;
+          padding: 12px;
+          padding-right: 20px;
+        `}
+      >
+        {films.map((film, index) => (
+          <FilmsListItem
+            key={film.id}
+            name={film.original_title}
+            imageSrc={film.poster_path}
+            active={activeIndex === index}
+          />
+        ))}
+      </ul>
+    </div>
   );
 }

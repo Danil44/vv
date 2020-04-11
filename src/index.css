@@ -126,11 +126,11 @@ body {
   line-height: 1;
   font-size: 16px;
   font-family: 'Open Sans';
-  overflow: hidden;
+  overflow-x: hidden;
 }
 @media (max-width: 1319px) {
   body {
-    font-size: 9px;
+    font-size: 11px;
   }
 }
 

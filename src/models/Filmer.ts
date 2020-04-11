@@ -25,5 +25,7 @@ export default class Filmer {
       'https://raw.githubusercontent.com/roman-curse/videoJson/master/videoJson.json',
     );
   }
-  //   static getByCategory(category: string): [] {}
+  static getFilmById(films: FilmProps[], id: number): FilmProps | undefined {
+    return films.find(film => film.id === id);
+  }
 }

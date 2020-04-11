@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import FilmsList from './FilmsList';
 import { jsx, css } from '@emotion/core';
 import FilmProps from '../types/Film';
@@ -9,14 +9,20 @@ import useKeyboardWalking from '../hooks/useKeyboardWalking';
 type FilmsProps = {
   films: FilmProps[];
   controlled: boolean;
-  onFilmSubmit: React.FormEventHandler;
+  onFilmSubmit: (filmId: number) => void;
 };
 
 export default function Films({ films, controlled, onFilmSubmit }: FilmsProps) {
   const { cursorPositionIndex, onKeyDown } = useKeyboardWalking({
     itemsLength: films.length,
     walkType: 'grid',
+    goBy: 5,
   });
+
+  const handleSubmit: React.FormEventHandler = e => {
+    e.preventDefault();
+    onFilmSubmit(films[cursorPositionIndex].id);
+  };
 
   return (
     <div
@@ -28,7 +34,7 @@ export default function Films({ films, controlled, onFilmSubmit }: FilmsProps) {
       <ControlledLayout
         autoFocus={true}
         controlled={controlled}
-        onSubmit={onFilmSubmit}
+        onSubmit={handleSubmit}
         onKeyDown={onKeyDown}
       >
         <FilmsList

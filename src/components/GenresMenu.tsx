@@ -25,7 +25,7 @@ export default function GenresMenu({
 
   useEffect(() => {
     onGenreChange(genres[cursorPositionIndex]);
-  }, [cursorPositionIndex]);
+  }, [cursorPositionIndex, onGenreChange, genres]);
 
   return (
     <div

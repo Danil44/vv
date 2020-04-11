@@ -1,10 +1,15 @@
 import React, { Fragment } from 'react';
-import Home from './pages/Home';
+import Home from './pages/Home/Home';
+import { Switch, Route } from 'react-router';
 
 function App() {
   return (
     <Fragment>
-      <Home />
+      <Switch>
+        <Route path="/:filmId?">
+          <Home />
+        </Route>
+      </Switch>
     </Fragment>
   );
 }

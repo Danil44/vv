@@ -13,7 +13,7 @@ function Layout({ children }: LayoutProps) {
       css={css`
         background-color: ${mainDark};
         width: 100%;
-        height: 100%;
+        min-height: 100%;
       `}
     >
       {children}
