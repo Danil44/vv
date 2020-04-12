@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 const KEY_UP = 38;
 const KEY_DOWN = 40;

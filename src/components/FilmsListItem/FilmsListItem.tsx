@@ -1,6 +1,6 @@
 import React from 'react';
 import { jsx, css } from '@emotion/core';
-import { mainOrange } from '../colors';
+import { mainOrange } from '../../colors';
 /**@jsx jsx */
 
 type FilmsListItemProps = {

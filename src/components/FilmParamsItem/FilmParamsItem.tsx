@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { css as styledCss } from 'styled-components';
-import { lightGrey } from '../colors';
+import { lightGrey } from '../../colors';
 import { jsx, css } from '@emotion/core';
 /**@jsx jsx */
 
@@ -38,8 +38,8 @@ export default function FilmParamsItem({ name, value }: FilmParamsItemProps) {
         padding-top: 10px;
       `}
     >
-      <OptionName>{name}</OptionName>
-      <OptionValue>{value}</OptionValue>
+      <OptionName data-testid="option-name">{name}</OptionName>
+      <OptionValue data-testid="option-value">{value}</OptionValue>
     </li>
   );
 }

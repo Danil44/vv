@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> it has not changed 1`] = `"<div class=\\"css-b07qpz-Layout\\"><header data-testid=\\"header\\" class=\\"css-1bxbtw7-Header\\"><h2 class=\\"css-1t6eos4-Header\\">FILMER</h2></header><div class=\\"css-utpa80-HomeInnerLayout\\">0<div class=\\"css-cxv9xu-Films\\"><form><input autofocus=\\"\\" class=\\"css-vxl42g\\"/></form><div class=\\"css-1hilo1s-FilmsList\\"><ul class=\\"css-1mknw5f-FilmsList\\"></ul></div></div></div></div>"`;

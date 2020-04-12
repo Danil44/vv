@@ -1,5 +1,5 @@
 import React from 'react';
-import FilmsListItem from './FilmsListItem';
+import FilmsListItem from './FilmsListItem/FilmsListItem';
 import { jsx, css } from '@emotion/core';
 import FilmProps from '../types/Film';
 /**@jsx jsx */

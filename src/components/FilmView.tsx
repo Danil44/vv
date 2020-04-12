@@ -1,4 +1,4 @@
-import React, { useEffect, KeyboardEvent } from 'react';
+import React, { useEffect } from 'react';
 import { jsx, css } from '@emotion/core';
 import styled from 'styled-components';
 import FilmParamsList from './FilmParamsList';
@@ -6,7 +6,7 @@ import FilmDescription from './FilmDescription';
 import FilmButtonsList from './FilmButtonsList';
 import FilmProps from '../types/Film';
 import FilmPreviewPicture from './FilmPreviewPicture';
-import useKeyboardWalking from '../hooks/useKeyboardWalking';
+import useKeyboardWalking from '../hooks/useKeyboardWalking/useKeyboardWalking';
 /**@jsx jsx */
 
 const Title = styled.h2`

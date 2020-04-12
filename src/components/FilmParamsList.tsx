@@ -1,5 +1,5 @@
 import React from 'react';
-import FilmParamsItem from './FilmParamsItem';
+import FilmParamsItem from './FilmParamsItem/FilmParamsItem';
 import { jsx, css } from '@emotion/core';
 /** @jsx jsx */
 

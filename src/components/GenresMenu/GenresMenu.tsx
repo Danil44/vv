@@ -1,8 +1,8 @@
 import React, { useRef, useEffect } from 'react';
-import GenresMenuList from './GenresMenuList';
+import GenresMenuList from '../GenresMenuList';
 import { jsx, css } from '@emotion/core';
-import useKeyboardWalking from '../hooks/useKeyboardWalking';
-import ControlledLayout from './ControlledLayout';
+import useKeyboardWalking from '../../hooks/useKeyboardWalking/useKeyboardWalking';
+import ControlledLayout from '../ControlledLayout';
 /**@jsx jsx */
 
 type GenresMenuProps = {

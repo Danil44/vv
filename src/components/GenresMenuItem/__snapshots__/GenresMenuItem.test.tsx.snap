@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GenresMenuItem /> has not changed 1`] = `"<li class=\\"css-1d8muia-GenresMenuItem\\"><span class=\\"css-2opb7a-GenresMenuItem\\"></span></li>"`;

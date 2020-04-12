@@ -1,7 +1,7 @@
 import React from 'react';
 import { jsx, css } from '@emotion/core';
-import { lightGrey, mainOrange } from '../colors';
-import { ReactComponent as RightArrowIcon } from '../images/right-arrow.svg';
+import { lightGrey, mainOrange } from '../../colors';
+import { ReactComponent as RightArrowIcon } from '../../images/right-arrow.svg';
 /**@jsx jsx */
 
 type GenresMenuItemProps = {

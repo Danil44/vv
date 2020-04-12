@@ -1,5 +1,5 @@
 import React from 'react';
-import GenresMenuItem from './GenresMenuItem';
+import GenresMenuItem from './GenresMenuItem/GenresMenuItem';
 
 type GenresMenuListProps = {
   genres: string[];

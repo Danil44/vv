@@ -1,16 +1,17 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import Home from './pages/Home/Home';
 import { Switch, Route } from 'react-router';
+import { HashRouter } from 'react-router-dom';
 
 function App() {
   return (
-    <Fragment>
+    <HashRouter basename="/">
       <Switch>
         <Route path="/:filmId?">
           <Home />
         </Route>
       </Switch>
-    </Fragment>
+    </HashRouter>
   );
 }
 

@@ -9,10 +9,11 @@ type HeaderProps = {
 export default function Header({ shift }: HeaderProps) {
   return (
     <header
-      css={css`
-        padding: 5.188em 5.625em;
-        transform: translateX(${shift ? '-70%' : 0});
-      `}
+      data-testid="header"
+      css={{
+        padding: ' 5.188em 5.625em',
+        transform: `translateX(${shift ? '-70%' : 0})`,
+      }}
     >
       <h2
         css={css`

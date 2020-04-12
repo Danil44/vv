@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FilmParamsItem /> has not changed 1`] = `"<li class=\\"css-j5wl32-FilmParamsItem\\"><span data-testid=\\"option-name\\" class=\\"sc-AxjAm koZgQB\\"></span><span data-testid=\\"option-value\\" class=\\"sc-AxirZ kGLtmA\\"></span></li>"`;

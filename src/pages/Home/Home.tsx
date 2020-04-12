@@ -1,8 +1,8 @@
 import React, { Fragment, useState, useEffect, KeyboardEvent } from 'react';
 import Layout from '../../components/Layout';
-import Header from '../../components/Header';
+import Header from '../../components/Header/Header';
 import HomeInnerLayout from '../../components/HomeInnerLayout';
-import GenresMenu from '../../components/GenresMenu';
+import GenresMenu from '../../components/GenresMenu/GenresMenu';
 import Films from '../../components/Films';
 import Filmer from '../../models/Filmer';
 import FilmProps from '../../types/Film';

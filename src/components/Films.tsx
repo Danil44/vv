@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import FilmsList from './FilmsList';
 import { jsx, css } from '@emotion/core';
 import FilmProps from '../types/Film';
 import ControlledLayout from './ControlledLayout';
-import useKeyboardWalking from '../hooks/useKeyboardWalking';
+import useKeyboardWalking from '../hooks/useKeyboardWalking/useKeyboardWalking';
 /**@jsx jsx */
 
 type FilmsProps = {
