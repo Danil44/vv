@@ -8,6 +8,7 @@ import Filmer from '../../models/Filmer';
 import FilmProps from '../../types/Film';
 import FilmView from '../../components/FilmView';
 import { useRouteMatch, useHistory } from 'react-router';
+import { KEY_B } from '../../hooks/useKeyboardWalking/useKeyboardWalking';
 
 function Home() {
   const [genres, setGenres] = useState<string[]>([]);
@@ -45,7 +46,7 @@ function Home() {
     }
 
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.keyCode === 66) {
+      if (e.keyCode === KEY_B) {
         if (params.filmId) {
           history.push('/');
           setSelectedFilm(null);

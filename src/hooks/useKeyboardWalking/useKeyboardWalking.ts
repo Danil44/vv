@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-const KEY_UP = 38;
-const KEY_DOWN = 40;
-const KEY_RIGHT = 39;
-const KEY_LEFT = 37;
+export const KEY_UP = 38;
+export const KEY_DOWN = 40;
+export const KEY_RIGHT = 39;
+export const KEY_LEFT = 37;
+export const KEY_B = 66;
 
 export default function useKeyboardWalking({
   itemsLength,
@@ -63,5 +64,5 @@ export default function useKeyboardWalking({
     }
   };
 
-  return { cursorPositionIndex, onKeyDown: keyDown };
+  return { cursorPositionIndex, onKeyDown: keyDown, setCursorPositionIndex };
 }
